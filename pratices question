@@ -1,0 +1,40 @@
+public class Person {
+    // Attributes (instance variables)
+    private String name;
+    private int age;
+
+    /**
+     * Constructor to initialize the Person object with name and age.
+     * @param name The name of the person.
+     * @param age The age of the person.
+     */
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    /**
+     * Method to print the details of the Person object.
+     */
+    public void printDetails() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    /**
+     * Main method to create and test Person objects.
+     */
+    public static void main(String[] args) {
+        // Create the first Person object
+        Person person1 = new Person("Alice", 30);
+        
+        // Create the second Person object
+        Person person2 = new Person("Bob", 25);
+
+        // Print the details of both Person objects
+        System.out.println("Details of Person 1:");
+        person1.printDetails();
+
+        System.out.println("Details of Person 2:");
+        person2.printDetails();
+    }
+}
