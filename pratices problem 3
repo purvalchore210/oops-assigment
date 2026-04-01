@@ -1,0 +1,33 @@
+class CARRENTAL {
+    private int CarId;
+    private String CarType;
+    private float Rent;
+
+    // Method to accept CarId and CarType
+    public void GetCar(int id, String type) {
+        CarId = id;
+        CarType = type;
+    }
+
+    // Method to calculate and return rent based on CarType
+    public float GetRent() {
+        if (CarType.equalsIgnoreCase("Small Car")) {
+            Rent = 1000;
+        } else if (CarType.equalsIgnoreCase("Van")) {
+            Rent = 800;
+        } else if (CarType.equalsIgnoreCase("SUV")) {
+            Rent = 2500;
+        } else {
+            Rent = 0; // default if invalid type
+        }
+        return Rent;
+    }
+
+    // Method to display car details
+    public void ShowCar() {
+        System.out.println("Car ID: " + CarId);
+        System.out.println("Car Type: " + CarType);
+        System.out.println("Rent: " + Rent);
+        System.out.println("----------------------");
+    }
+}
