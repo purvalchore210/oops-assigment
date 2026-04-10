@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class UsernameValidator {
+    public static void main(String[] args) {
+        // 1. Accept username from user
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter username: ");
+        String userInput = scanner.nextLine();
+
+        // 2. Remove leading/trailing spaces
+        // 3. Convert to lowercase
+        String cleanedUsername = userInput.strip().toLowerCase();
+
+        // 4. Display the cleaned username
+        System.out.println("Cleaned username: '" + cleanedUsername + "'");
+        
+        scanner.close();
+    }
+}
